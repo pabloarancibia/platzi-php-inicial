@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 //use App\Models\Job;
-use app\Models\Job;
+use App\Models\Job;
 
 $capsule = new Capsule;
 
@@ -25,10 +25,11 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 if (!empty($_POST)) {
-    $job = new Job();
-    $job->title = $_POST['title'];
-    $job->description = $_POST['description'];
-    $job->save();
+    echo "post";
+    $this->$job = new Job();
+    $this->$job->title = $_POST['title'];
+    $this->$job->description = $_POST['description'];
+    $this->$job->save();
 }
 
 ?>

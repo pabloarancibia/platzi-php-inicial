@@ -1,13 +1,15 @@
 <?php
-
-use App\Models\{Job, Project};
+//require_once 'vendor/autoload.php';
+//use Illuminate\Database\Capsule\Manager as Capsule;
+//use Illuminate\Database\Eloquent\Model;
+//namespace App\Models;
+use App\Models\Project;
+use App\Models\Job;
 
 $jobs = Job::all();
 
-  $project1 = new Project('Project 1', 'Description 1');
-$projects = [
-    $project1
-];
+    $project1 = new Project('Project 1', 'Description 1');
+    $projects = [$project1];
   
 function printElement($job) {
     // if($job->visible == false) {
@@ -26,3 +28,4 @@ function printElement($job) {
     echo '</ul>';
     echo '</li>';
   }
+?>

@@ -3,7 +3,8 @@
 require_once 'vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use App\Models\Job;
+//use App\Models\Job;
+//use App\Models\Job;
 
 $capsule = new Capsule;
 
@@ -23,7 +24,8 @@ $capsule->setAsGlobal();
 // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
 $capsule->bootEloquent();
 
-require_once('jobs.php');
+require_once 'jobs.php';
+
 
 $name = 'Hector Benitez';
 $limitMonths = 2000;
@@ -93,13 +95,13 @@ $limitMonths = 2000;
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
-            <ul>
-            <?php
-            for($idx = 0;$idx < count($projects); $idx++) {
-              printElement($projects[$idx]);
-            }
-            ?>
-          </ul>
+<!--            <ul>-->
+<!--            --><?php
+//            for($idx = 0;$idx < count($projects); $idx++) {
+//              printElement($projects[$idx]);
+//            }
+//            ?>
+<!--          </ul>-->
 
             <div class="project">
                 <h5>Project X</h5>
