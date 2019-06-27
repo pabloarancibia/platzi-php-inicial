@@ -25,11 +25,11 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 if (!empty($_POST)) {
-    echo "post";
-    $this->$job = new Job();
-    $this->$job->title = $_POST['title'];
-    $this->$job->description = $_POST['description'];
-    $this->$job->save();
+    echo "post ok";
+    $job = new Job();
+    $job->title = $_POST['title'];
+    $job->description = $_POST['description'];
+    $job->save();
 }
 
 ?>
@@ -42,7 +42,7 @@ if (!empty($_POST)) {
     </head>
     <body>
         <h1>Add Job</h1>
-        <form action="addJob.php" method="post" >
+        <form action="" method="post" >
             <label for="">Title:</label>
             <input type="text" name="title" ><br>
             <label for="">Description:</label>
